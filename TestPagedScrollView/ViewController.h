@@ -11,12 +11,17 @@
 
 @interface ViewController : UIViewController<UIScrollViewDelegate>
 {
+    int seenItemNum;
+    int itemCount;
     float itemWidth;
     float itemHeight;
+    
     float itemGap;
-    float itemCount;
+    float scrollViewWidth;
     float scrollMarginX;
     float scrollMarginY;
+    float itemMarginX;
+    float itemMarginY;
     
     JWTransitView *containerView;
     UIScrollView *myScrollView;

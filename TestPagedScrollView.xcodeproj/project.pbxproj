@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F94CD1117BB5B9F00C0E8E2 /* MacroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		CE86B4E917BA77E100A9A462 /* TestPagedScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPagedScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE86B4EC17BA77E100A9A462 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE86B4EE17BA77E100A9A462 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +101,7 @@
 				CE86B50417BA77E100A9A462 /* ViewController.h */,
 				CE86B50517BA77E100A9A462 /* ViewController.m */,
 				CE86B50717BA77E100A9A462 /* ViewController.xib */,
+				2F94CD1117BB5B9F00C0E8E2 /* MacroDefinition.h */,
 				CE86B4F317BA77E100A9A462 /* Supporting Files */,
 			);
 			path = TestPagedScrollView;
@@ -326,6 +328,7 @@
 				CE86B50E17BA77E100A9A462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
