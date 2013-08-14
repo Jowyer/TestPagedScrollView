@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface JWTransitView : UIView
+{
+    UIView *leftMaskView;
+    UIView *rightMaskView;
+}
 
 @property (nonatomic, assign) UIScrollView* childScrollView;
+
+-(void)showMaskViewWithMiddleWidth:(float)middleWidth;
 
 @end

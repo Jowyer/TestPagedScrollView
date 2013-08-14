@@ -34,27 +34,28 @@
     [super viewDidLoad];
     
     containerView = [[JWTransitView alloc] initWithFrame:CGRectMake(0, 40, kScreenWidth, itemHeight + itemMarginY * 2)];
-    containerView.backgroundColor = JWColorWithRGBA(33, 33, 33, 0.7);
+    [self.view addSubview:containerView];
+//    containerView.backgroundColor = JWColorWithRGBA(33, 33, 33, 0.7);
     
     myScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(scrollMarginX, scrollMarginY, scrollViewWidth, itemHeight + itemMarginY * 2)];
     myScrollView.contentSize = CGSizeMake(itemCount * (itemWidth + itemGap), itemHeight + itemMarginY * 2);
     myScrollView.pagingEnabled = YES;
     myScrollView.clipsToBounds = NO;
     myScrollView.showsHorizontalScrollIndicator = NO;
-    myScrollView.backgroundColor = JWColorWithRGBA(24, 56, 235, 0.3);
     myScrollView.delegate = self;
     
     containerView.childScrollView = myScrollView;
+    [containerView addSubview:myScrollView];
+    [containerView showMaskViewWithMiddleWidth:scrollViewWidth];
+//    myScrollView.backgroundColor = JWColorWithRGBA(24, 56, 235, 0.3);
+    
     for (int i = 0; i < itemCount; i++)
     {
         UIImageView *itemView = [[[UIImageView alloc] initWithFrame:CGRectMake(itemMarginX + i * scrollViewWidth, itemMarginY, itemWidth, itemHeight)] autorelease];
         itemView.image = [UIImage imageNamed:[NSString stringWithFormat:@"item%d.png", i]];
         [myScrollView addSubview:itemView];
-        itemView.backgroundColor = JWColorWithRGBA(233, 233, 233, 0.5);
+//        itemView.backgroundColor = JWColorWithRGBA(233, 233, 233, 0.5);
     }
-    
-    [containerView addSubview:myScrollView];
-    [self.view addSubview:containerView];
 }
 
 - (void)dealloc
