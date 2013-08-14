@@ -33,6 +33,18 @@
 {
     [super viewDidLoad];
     
+    [self loadPagedScrollView];
+}
+
+- (void)dealloc
+{
+    [containerView release]; containerView = nil;
+    [myScrollView release]; myScrollView = nil;
+    [super dealloc];
+}
+
+-(void)loadPagedScrollView
+{
     containerView = [[JWTransitView alloc] initWithFrame:CGRectMake(0, 40, kScreenWidth, itemHeight + itemMarginY * 2)];
     [self.view addSubview:containerView];
 //    containerView.backgroundColor = JWColorWithRGBA(33, 33, 33, 0.7);
@@ -58,19 +70,12 @@
     }
 }
 
-- (void)dealloc
-{
-    [containerView release]; containerView = nil;
-    [myScrollView release]; myScrollView = nil;
-    [super dealloc];
-}
-
 #pragma mark- ScrollView Delegate
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     if (scrollView == myScrollView)
     {
-        int page = myScrollView.contentOffset.x / CGRectGetWidth(myScrollView.frame);
+        int page = myScrollView.contentOffset.x / scrollViewWidth;
         NSLog(@"now the page is %d", page);
     }
 }

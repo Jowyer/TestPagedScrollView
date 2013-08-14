@@ -45,7 +45,7 @@
     rightMaskView = [[UIView alloc] initWithFrame:CGRectMake(maskWidth + middleWidth, 0, maskWidth, CGRectGetHeight(self.frame))];
     [self addSubview:rightMaskView];
     
-    leftMaskView.backgroundColor = rightMaskView.backgroundColor = JWColorWithRGBA(33, 33, 33, 0.5);
+    leftMaskView.backgroundColor = rightMaskView.backgroundColor = JWColorWithRGBA(1, 1, 1, 0.2);
 }
 
 -(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event

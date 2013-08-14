@@ -17,7 +17,7 @@
     float itemHeight;
     
     float itemGap;
-    float scrollViewWidth;
+    int scrollViewWidth;
     float scrollMarginX;
     float scrollMarginY;
     float itemMarginX;
